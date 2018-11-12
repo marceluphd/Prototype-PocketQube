@@ -1,8 +1,8 @@
-This is a proof of concept prototype of a LoRa based PocketQube processor and radio board. It follows much of the design principles of the successful [$50SAT PocketQube satellite](http://www.50dollarsat.info/). A 1P Pocket cube is 50mm x 50mm and this allows for PCBs that are approximately 40mm square. 
+This is a proof of concept prototype of a LoRa based PocketQube processor and radio board. It follows much of the design principles of the successful [$50SAT PocketQube satellite](http://www.50dollarsat.info/). A 1P PocketQube is 50mm x 50mm and this allows for boards that are approximately 40mm square. 
 
-The concept behind this design is that the main board (PCB) is primarily intended for use in a PocketQube satellite but that the board can also be used for terrestrial remote sensor applications. 
+The concept behind this design is that the main board is primarily intended for use in a PocketQube satellite but that the board can also be used for terrestrial remote sensor applications. 
 
-The radio transceiver module (RFM98) uses a LoRa device developed by Semtech and released in 2013. Typical LoRa modules are the same size (15mmx15mm) as previous FSK data modules such as the RFM22B used in $50SAT. LoRa uses a proprietary form of spread spectrum radio technology and is capable of operating with signals that are up to 20dB below noise level. This give LoRa significant range\distance advantages over previous generation FSK devices of around 10 times.
+The radio transceiver module (RFM98) uses a LoRa device developed by Semtech and released in 2013. Typical LoRa modules are the same size (15mmx15mm) as previous FSK data modules such as the RFM22B used in $50SAT. LoRa uses a proprietary form of spread spectrum radio technology and is capable of receiving signals that are up to 20dB below noise level. This give LoRa significant range\distance advantages over previous generation FSK devices, LoRa typically goes 10 times further for the same transmitter power. 
 
 The very long range capability of LoRa has resulted in a new family of sensor based applications, in particular [The Things Network](https://www.thethingsnetwork.org/).
 
@@ -16,18 +16,20 @@ LoRa devices can also transmit the FSK RTTY data that was used with such success
 
 LoRa has significant potential for use in very small and low power satellites. The small size of a PocketQube implies low amounts of power from solar panels which in turns means limited power for data transmissions. The success of $50SAT did demonstrate that 100mW FSK data could be received from a satellite at a range of 1000km but this did require the use of good quality low noise amplifiers and antennas. LoRa, with its much greater range capability has the potential to be received with very simple hand-held receivers, such as that shown in the picture below;
 
+<br><br>
+
 ![Picture 1](/Pictures/ProMiniShields.jpg)
 
-This concept prototype is designed to act as the processor\radio board for a LoRa based PocketQube satellite. The board is stacked vertically together with a battery and solar power controller board and possibly a sensor board, giving a 3 board stack. The power and I\O connections between the board run vertically on the board edges through a series of standard 0.1" connectors. 
+This PocketQube processor\radio board is designed to be used with two other boards, all stacked vertically. There would be a battery and solar power controller board and a sensor board, giving a 3 board stack. The power and I\O connections between the board run vertically on the board edges through a series of standard 0.1" spaced connectors. 
 
 For terrestrial outdoor applications the stack of boards can be conveniently mounted in housings made from plastic plumbing pipe and end caps. The outline of a typical 50mm internal diameter pipe is shown, when used in this mode the boards will have the corners milled off. 
 
-
+<br><br>
 ## Processor and Radio Board Features.
 
 
 ![Picture 1](/Pictures/LoRaSAT_PCB_Layout.jpg)
-
+<br><br>
 
 The prototype board has been designed with these features;
 
@@ -39,9 +41,9 @@ ATmega1284P processor, 128Kbyte flash memory, 16Kbyte RAM, 4Kbyte EEPROM, 32 I/O
 
 LoRa\FSK radio transceiver, SMA antenna socket. Versions available for 434Mhz, 868Mhz and 915Mhz Industrial Scientific and Medical (ISM) bands 
 
-8Kbyte FRAM, write endurance of 100,000,000,000,000 times.
+8Kbyte FRAM for power off storage, write endurance of 100,000,000,000,000 times.
 
-TPL5110 power down timer, preset from seconds to 2 hours. Processor can be powered down completely.
+TPL5110 power down timer, preset from seconds to 2 hours. Enables processor to be powered down completely.
 
 TPL5010 interrupt sleep timer, preset from seconds to 2 hours
 
@@ -85,6 +87,10 @@ ConP program port) centre 4.45,27.56
 
 ## Use of BASIC
 
-It should be noted that [Great COW Basic](http://gcbasic.sourceforge.net/Typesetter/index.php/Home) (GCB) will run on the ATmega1284P, so useful if an alternative language was needed, perhaps for teaching purposes. In applications where  an Arduino C\C++ application has memory and speed issues, Great Cow Basic can have advantages, see [GCB versus Arduino](https://www.youtube.com/watch?v=qdloFhULa3I) for some examples. 
+It should be noted that [Great COW Basic](http://gcbasic.sourceforge.net/Typesetter/index.php/Home) (GCB) will run on the ATmega1284P, so is a useful option if an alternative language was needed, perhaps for teaching purposes. In applications where an Arduino C\C++ application has memory and speed issues, Great Cow Basic can have advantages, see [GCB versus Arduino](https://www.youtube.com/watch?v=qdloFhULa3I) for some examples. 
+
+<br><br>
+### Stuart Robinson
+### November 2018
 
  
