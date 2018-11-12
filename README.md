@@ -1,4 +1,4 @@
-This is a proof of concept prototype of a LoRa based PocketQube processor and radio board. It follows much of the design principles of the successful [$50SAT PocketQube satellite](http://www.50dollarsat.info/). A 1P PocketQube is 50mm x 50mm and this allows for boards that are approximately 40mm square. 
+This is a proof of concept prototype of a LoRa based processor and radio board for a PocketQube satellite. It follows much of the design principles of the successful [$50SAT PocketQube satellite](http://www.50dollarsat.info/). A 1P PocketQube is 50mm x 50mm and this allows for boards that are approximately 40mm square. 
 
 The concept behind this design is that the main board is primarily intended for use in a PocketQube satellite but that the board can also be used for terrestrial remote sensor applications. 
 
